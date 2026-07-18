@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0704" />
+    <meta name="description" content="Dharohar — heritage metalware, handcrafted for generations." />
+    <title>Dharohar — Heritage Kitchen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="app" class="app" data-page="0">
+      <div class="backgrounds" aria-hidden="true">
+        <div class="scene-bg is-active" style="--bg:url('/assets/heritage-kitchen-4k.webp')"></div>
+        <div class="scene-bg" style="--bg:url('/assets/materials-alcove-4k.webp')"></div>
+        <div class="scene-bg" style="--bg:url('/assets/artisan-craft-4k.webp')"></div>
+        <div class="scene-bg" style="--bg:url('/assets/lifetime-care-4k.webp')"></div>
+      </div>
+      <div class="film-grain" aria-hidden="true"></div>
+      <div class="vignette" aria-hidden="true"></div>
+      <div class="transition-veil" aria-hidden="true"></div>
+
+      <header class="topbar">
+        <button class="brand" data-go="0" aria-label="Dharohar home">
+          <span class="brand-mark">✥</span>
+          <span><strong>DHAROHAR</strong><small>HERITAGE KITCHEN</small></span>
+        </button>
+        <nav class="main-nav" aria-label="Primary navigation">
+          <button data-go="0">Collection</button>
+          <button data-go="1">Materials</button>
+          <button data-go="2">Craft</button>
+          <button data-action="personalise">Personalise</button>
+          <button data-go="3">Lifetime Care</button>
+        </nav>
+        <div class="header-actions">
+          <button class="outline-pill" data-action="consult">Private consultation</button>
+          <button class="round-button sound-toggle" data-action="sound" aria-label="Toggle ambient sound">
+            <span class="sound-bars"><i></i><i></i><i></i></span>
+          </button>
+        </div>
+        <button class="menu-button" aria-label="Open navigation" aria-expanded="false"><i></i><i></i></button>
+      </header>
+
+      <main id="stage" class="stage" aria-live="polite"></main>
+
+      <aside class="side-rail" aria-label="Quick links">
+        <button data-go="1" aria-label="Materials">◌</button>
+        <button data-action="consult" aria-label="Private consultation">⌂</button>
+        <button data-go="2" aria-label="Our craft">✥</button>
+        <button data-action="personalise" aria-label="Personalisation">◉</button>
+      </aside>
+
+      <footer class="footer-nav">
+        <div class="progress-pages" aria-label="Page navigation"></div>
+        <div class="arrow-nav">
+          <button data-direction="-1" aria-label="Previous page">‹</button>
+          <button data-direction="1" aria-label="Next page">›</button>
+        </div>
+      </footer>
+
+      <div class="mobile-counter" aria-hidden="true"><span>01</span><i></i><em>04</em></div>
+      <dialog id="modal" class="modal">
+        <button class="modal-close" data-action="close" aria-label="Close">×</button>
+        <div id="modal-content"></div>
+      </dialog>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
