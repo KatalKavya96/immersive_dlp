@@ -6,6 +6,7 @@
     <meta name="theme-color" content="#0b0704" />
     <meta name="description" content="Dharohar — heritage metalware, handcrafted for generations." />
     <title>Dharohar — Heritage Kitchen</title>
+    <link rel="preload" as="image" href="/assets/heritage-kitchen-4k.webp" fetchpriority="high" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -13,14 +14,27 @@
   <body>
     <div id="app" class="app" data-page="0">
       <div class="backgrounds" aria-hidden="true">
-        <div class="scene-bg is-active" style="--bg:url('/assets/heritage-kitchen-4k.webp')"></div>
-        <div class="scene-bg" style="--bg:url('/assets/materials-alcove-4k.webp')"></div>
-        <div class="scene-bg" style="--bg:url('/assets/artisan-craft-4k.webp')"></div>
-        <div class="scene-bg" style="--bg:url('/assets/lifetime-care-4k.webp')"></div>
+        <div class="scene-bg is-active" style="--bg:image-set(url('/assets/heritage-kitchen.png') 1x,url('/assets/heritage-kitchen-4k.webp') 2x)"></div>
+        <div class="scene-bg" style="--bg:image-set(url('/assets/materials-alcove.png') 1x,url('/assets/materials-alcove-4k.webp') 2x)"></div>
+        <div class="scene-bg" style="--bg:image-set(url('/assets/artisan-craft.png') 1x,url('/assets/artisan-craft-4k.webp') 2x)"></div>
+        <div class="scene-bg" style="--bg:image-set(url('/assets/lifetime-care.png') 1x,url('/assets/lifetime-care-4k.webp') 2x)"></div>
       </div>
       <div class="film-grain" aria-hidden="true"></div>
       <div class="vignette" aria-hidden="true"></div>
+      <div class="cinema-light" aria-hidden="true"></div>
+      <div class="atmosphere" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+      <div class="cursor-aura" aria-hidden="true"></div>
+      <div class="copper-thread" aria-hidden="true"><i></i></div>
       <div class="transition-veil" aria-hidden="true"></div>
+
+      <div class="opening-sequence" aria-label="Dharohar is loading">
+        <div class="opening-emblem">✥</div>
+        <strong>DHAROHAR</strong>
+        <small>HERITAGE KITCHEN</small>
+        <i class="opening-line"></i>
+      </div>
 
       <header class="topbar">
         <button class="brand" data-go="0" aria-label="Dharohar home">
@@ -36,7 +50,7 @@
         </nav>
         <div class="header-actions">
           <button class="outline-pill" data-action="consult">Private consultation</button>
-          <button class="round-button sound-toggle" data-action="sound" aria-label="Toggle ambient sound">
+          <button class="round-button sound-toggle" data-action="sound" aria-label="Toggle ambient sound" aria-pressed="false">
             <span class="sound-bars"><i></i><i></i><i></i></span>
           </button>
         </div>
@@ -45,18 +59,15 @@
 
       <main id="stage" class="stage" aria-live="polite"></main>
 
-      <aside class="side-rail" aria-label="Quick links">
-        <button data-go="1" aria-label="Materials">◌</button>
-        <button data-action="consult" aria-label="Private consultation">⌂</button>
-        <button data-go="2" aria-label="Our craft">✥</button>
-        <button data-action="personalise" aria-label="Personalisation">◉</button>
+      <aside class="side-rail chapter-nav" aria-label="Dharohar chapters">
+        <div class="chapter-list"></div>
       </aside>
 
       <footer class="footer-nav">
         <div class="progress-pages" aria-label="Page navigation"></div>
         <div class="arrow-nav">
-          <button data-direction="-1" aria-label="Previous page">‹</button>
-          <button data-direction="1" aria-label="Next page">›</button>
+          <button data-direction="-1" aria-label="Previous page">↑</button>
+          <button data-direction="1" aria-label="Next page">↓</button>
         </div>
       </footer>
 
